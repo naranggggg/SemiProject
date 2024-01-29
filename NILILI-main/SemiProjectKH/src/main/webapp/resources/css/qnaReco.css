@@ -1,0 +1,183 @@
+#qna{
+     display: none; 
+}
+
+
+/*질문 박스에 대한 css*/
+.qBox{
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 24px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+
+/*답변 박스에 대한 css*/
+
+.answerBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+
+.answerList{
+    border-radius: 20px;
+    display: block;
+	width: 43%;
+    border: 0px;
+    float: left;
+	height: 320px;
+    box-sizing: border-box;
+    font-weight: 700;
+    margin: 20px 0px; 
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.answerList span {
+	display:block;
+	position: relative;
+	background-color: #A90000;
+	color: white;
+	width: 100px;
+	height: 28px;
+	font-size: 18px;
+	opacity: 0.8;
+	bottom: 43%;
+	border-radius: 10px;
+	z-index:100;
+}
+
+
+/* 답변버튼 id 개별 부여, 각각 이미지 넣기 */
+#box-0-0 {
+	background-image: url('../img/recoImg/alone.jpg');
+	background-size: cover;
+}
+
+#box-0-1 {
+	background-image: url('../img/recoImg/couple.jpg');
+	background-size: cover;
+}
+
+#box-0-2 {
+	background-image: url('../img/recoImg/family.jpg');
+	background-size: cover;
+}
+
+#box-0-3 {
+	background-image: url('../img/recoImg/friends.jpg');
+	background-size: cover;
+}
+
+
+
+#box-1-0 {
+	background-image: url('../img/recoImg/activity1.jpg');
+	background-size: cover;
+}
+
+#box-1-1 {
+	background-image: url('../img/recoImg/eating5.jpg');
+	background-size: cover;
+}
+
+#box-1-2 {
+	background-image: url('../img/recoImg/healing1.jpg');
+	background-size: cover;
+}
+
+#box-1-3 {
+	background-image: url('../img/recoImg/shopping1.jpg');
+	background-size: cover;
+}
+
+
+
+#box-2-0 {
+	background-image: url('../img/recoImg/history1.jpg');
+	background-size: cover;
+}
+
+#box-2-1 {
+	background-image: url('../img/recoImg/tourist1.jpg');
+	background-size: cover;
+}
+
+#box-2-2 {
+	background-image: url('../img/recoImg/experience1.jpg');
+	background-size: cover;
+}
+
+#box-2-3 {
+	background-image: url('../img/recoImg/pets1.jpg');
+	background-size: cover;
+}
+
+
+
+#box-3-0 {
+	background-image: url('../img/recoImg/camera.jpg');
+	background-size: cover;
+}
+
+#box-3-1 {
+	background-image: url('../img/recoImg/walking.jpg');
+	background-size: cover;
+}
+
+#box-3-2 {
+	background-image: url('../img/recoImg/manyPeople.jpg');
+	background-size: cover;
+}
+
+#box-3-3 {
+	background-image: url('../img/recoImg/cafeFood.jpg');
+	background-size: cover;
+}
+
+
+/*답변 박스에 대한 호버와 포커스*/
+.answerList:hover, .answerList:focus{
+
+    opacity: 0.9;
+
+}
+
+
+
+/*질문 페이지 상단의 진행정도 바*/
+.status{
+    height: 20px;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+/*질문 페이지 상단의 진행정도바 안에 채워지는 바*/
+.statusBar{
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+    background: linear-gradient(to bottom,  #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    border-radius: 20px;
+}
+
+/* 질문 페이지 상단 게이지 대신 메세지 사용 */
+.depth {}
+
+.depthTextBox {
+	text-align:center;
+}
+
+.depthText {}
+
+.korean {
+	font-family: 'Nanum Gothic', sans-serif;
+}

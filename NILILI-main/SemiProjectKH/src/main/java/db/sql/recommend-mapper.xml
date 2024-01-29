@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+
+	<entry key="resultRecommend">
+		SELECT PL_NO
+		     , PL_NAME
+		     , PL_ADDRESS
+		     , PL_INFO
+		     , USE_YN
+		FROM PLACE
+		WHERE PL_NO = ?
+		AND USE_YN = 'Y'
+	</entry>
+	
+
+	<entry key="updateTaste">
+		UPDATE SUBSCRIBE
+		SET TASTE_1 = ?
+		  , TASTE_2 = ?
+		  , TASTE_3 = ?
+		  , MODI_DATE = SYSDATE
+		WHERE MEMBER_NO = ?
+	</entry>
+	
+	<entry key="updatePlNo">
+		UPDATE SUB_RECOMMEND
+		SET PL_NO = ?
+		  , MODI_DATE = SYSDATE
+		WHERE MEMBER_NO = ?	
+	</entry>
+
+
+</properties>

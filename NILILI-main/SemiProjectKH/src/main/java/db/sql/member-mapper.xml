@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="insertMember">
+
+INSERT INTO MEMBER(MEMBER_NO
+                   ,MEMBER_ID
+                   ,MEMBER_PWD
+                   ,MEMBER_NAME
+                   ,MEMBER_BIRTH
+                   ,MEMBER_GENDER
+                   ,MEMBER_PHONE
+                   ,MEMBER_EMAIL
+                   ,MEMBER_ADDRESS
+                   ,MEMBER_SUBSCRIBE
+                   ,MEMBER_DESCRIPTION
+                   ,MEMBER_REGI_DATE
+                   ,MEMBER_MODI_DATE
+                   ,MEMBER_USE_YN)
+        VALUES(SEQ_MNO.NEXTVAL
+              ,?
+              ,?
+              ,?
+              ,?
+              ,?
+              ,?
+              ,?
+              ,?
+              ,'N'
+              ,'기본값입니다.'
+              ,SYSDATE
+              ,SYSDATE
+              ,'Y')
+
+
+	</entry>
+	
+	<entry key="overLapCk">
+	
+	SELECT COUNT(*) COUNT
+	FROM MEMBER
+	WHERE MEMBER_ID =?
+	
+	
+	</entry>
+	
+	<entry key="loginMember">
+	
+   SELECT *
+             FROM MEMBER
+             WHERE MEMBER_ID= ?
+             AND MEMBER_PWD = ?
+             AND MEMBER_USE_YN='Y'
+	
+	</entry>
+	
+	<entry key="findId">
+	
+	    SELECT MEMBER_ID
+        FROM MEMBER
+        WHERE MEMBER_NAME = ?
+        AND MEMBER_EMAIL = ?
+        AND MEMBER_USE_YN= 'Y'
+	
+	</entry>
+	
+	<entry key="findPwd">
+SELECT COUNT(*) COUNT
+FROM MEMBER
+WHERE MEMBER_ID = ?
+AND MEMBER_NAME = ?
+AND MEMBER_EMAIL = ?
+AND MEMBER_USE_YN = 'Y'
+	
+	</entry>
+	
+	<entry key="updatePwd">
+	UPDATE MEMBER
+SET MEMBER_PWD = ?
+WHERE MEMBER_ID= ?
+AND MEMBER_NAME =?
+AND MEMBER_EMAIL =?
+AND MEMBER_USE_YN = 'Y'
+	
+	
+	
+	
+	</entry>
+	
+		<entry key="SubscribeChange">
+
+		UPDATE MEMBER
+		 SET MEMBER_SUBSCRIBE = 'Y'
+		 WHERE MEMBER_NAME = ?
+		 AND MEMBER_NO = ?
+		</entry>
+		
+		<entry key="overLapCkEmail">
+		SELECT COUNT(*) COUNT
+		FROM MEMBER
+		WHERE MEMBER_EMAIL = ?
+		</entry>
+	
+	<entry key="updateMember">
+	UPDATE MEMBER 
+	SET MEMBER_PHONE=?
+       ,MEMBER_EMAIL=?
+       ,MEMBER_MODI_DATE=SYSDATE
+     WHERE MEMBER_NO = ?
+	
+	</entry>
+	
+	<entry key = "selectMember">
+	SELECT *
+	FROM MEMBER
+	WHERE MEMBER_ID = ?
+	AND MEMBER_USE_YN = 'Y'
+	
+	</entry>
+
+<entry key="myUpdatePwd">
+ UPDATE MEMBER
+ SET MEMBER_PWD =?
+ WHERE MEMBER_PWD =?
+ AND MEMBER_NO=?
+ AND MEMBER_USE_YN='Y'
+</entry>
+
+
+<entry key="selectMember2">
+SELECT *
+FROM MEMBER
+WHERE MEMBER_NO =?
+AND MEMBER_USE_YN = 'Y'
+</entry>
+<entry key="mypageAbandon">
+	UPDATE MEMBER
+	 SET MEMBER_SUBSCRIBE = 'N'
+	 WHERE MEMBER_NAME = ?
+	 AND MEMBER_NO = ?
+	 
+	 
+	
+</entry>
+	
+	<entry key="findSubcribe">
+	
+SELECT SUB_NO
+        ,MEMBER_NO
+        ,TASTE_1
+        ,TASTE_2
+        ,TASTE_3
+        ,DESCRIPTION
+        ,REGI_DATE
+        ,MODI_DATE
+        ,USE_YN
+        ,EXPIRATION_DATE
+FROM SUBSCRIBE S
+JOIN MEMBER USING (MEMBER_NO)
+WHERE MEMBER_NO= ?
+AND USE_YN = 'Y'
+	</entry>
+	
+
+
+	<entry key="memberDelete">
+	UPDATE MEMBER
+	SET MEMBER_USE_YN='N'
+	WHERE MEMBER_NAME =?
+	AND MEMBER_NO=?
+	</entry>
+	
+	<entry key="myPageMemberPwdCheck">
+	SELECT COUNT(*) COUNT
+     FROM MEMBER
+     WHERE MEMBER_PWD = ?
+     AND MEMBER_NO= ?
+	</entry>
+
+
+</properties>
+
+
+
+

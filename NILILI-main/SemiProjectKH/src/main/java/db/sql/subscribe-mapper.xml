@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<entry key="SubscribeInsert">
+
+		INSERT INTO SUBSCRIBE(SUB_NO
+		                     ,MEMBER_NO
+		                     ,DESCRIPTION)
+		       VALUES(SEQ_SNO.NEXTVAL
+		             ,?
+		             ,'기본값입니다.')
+
+	</entry>
+	 
+	<entry key="subscribeDelete">
+	
+	UPDATE SUBSCRIBE
+	 SET USE_YN = 'N'
+	 WHERE MEMBER_NO = ?
+	
+	</entry>
+	
+	<entry key="updateSubscribe">
+
+	 SELECT *
+     FROM SUBSCRIBE
+     WHERE MEMBER_NO = ?
+     AND USE_YN ='Y'
+     
+	</entry>
+	
+	<entry key="updateRecommend">
+	
+	INSERT INTO SUB_RECOMMEND(RECOMMEND_NO
+								,MEMBER_NO)
+				VALUES(SEQ_RNO.NEXTVAL
+						,?)						
+	
+	
+	</entry>
+	
+	
+</properties>
+
+

@@ -1,0 +1,48 @@
+#qna{
+    display: none;
+}
+
+
+/*질문 박스에 대한 css*/
+.qBox{
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 24px;
+    width: 80%;
+}
+
+
+/*답변 박스에 대한 css*/
+.answerList{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: block;
+    width: 80%;
+    border: 0px;
+    font-size: 20px;
+}
+
+/*답변 박스에 대한 호버와 포커스*/
+.answerList:hover, .answerList:focus{
+    background-color: #9A0A0A;
+    color: white;
+}
+
+
+/*질문 페이지 상단의 진행정도 바*/
+.status{
+    height: 20px;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+/*질문 페이지 상단의 진행정도바 안에 채워지는 바*/
+.statusBar{
+    height: 100%;
+    
+    background : #9A0A0A;
+
+    border-radius: 20px;
+}

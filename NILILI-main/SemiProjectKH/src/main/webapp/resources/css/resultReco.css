@@ -1,0 +1,40 @@
+#result{
+    display: none;
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.resultname{
+    font-size: 26px;
+}
+
+.resultDesc{
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: auto;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    padding: 50px;
+}
+
+.kakao{
+    color: #000000, 90%;
+    background-color: #FEE500;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+
+/*만들어놓고 안씀*/
+.kakao:hover, .kakao:focus{ 
+    background-color: whitesmoke;
+    color: #FEE500;
+}
